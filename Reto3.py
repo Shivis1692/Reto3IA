@@ -70,6 +70,13 @@ try:
     total = receipt.fields.get("Total")
     if total:
         print("Total: {}".format(total.value))
+    cfdi = receipt.fields.get("CFDI")
+    if cfdi:
+        print("CFDI: {}".format(cfdi.value))
+    forma_de_pago = receipt.fields.get("Forma_de_pago")
+    if forma_de_pago:
+        print("Forma de pago: {}".format(forma_de_pago.value))
+        
 
 except Exception as ex:
     print('Error:', ex)
